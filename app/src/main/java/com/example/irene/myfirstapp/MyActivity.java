@@ -41,6 +41,22 @@ public class MyActivity extends AppCompatActivity {
     public void respondeXML(View view) {
         Log.i("BTN", "respondeXML()");
         muestraToast(view);
+        Intent intent = new Intent(this, ListaActivity.class);
+        startActivity(intent);
+    }
+
+    /*Called when the user clicks the Send button*/
+    /*In order for the system to match this method to the method name given to android:onCLick
+    the signature must be: PUBLIC, HAVE RETURN VALUE, HAVE A VIEW AS THE ONLY PARAMETER
+    */
+    public void sendMessage(View view){
+        //An intent is an abstract description of an operation to be performed.
+        Intent intent = new Intent(this, DisplayMessageActivity.class);
+        EditText editText = (EditText) findViewById(R.id.edit_message);
+        String message = editText.getText().toString();
+        intent.putExtra(EXTRA_MESSAGE, message);
+        startActivity(intent);
+
     }
 
     @Override
@@ -65,17 +81,5 @@ public class MyActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    /*Called when the user clicks the Send button*/
-    /*In order for the system to match this method to the method name given to android:onCLick
-    the signature must be: PUBLIC, HAVE RETURN VALUE, HAVE A VIEW AS THE ONLY PARAMETER
-    */
-    public void sendMessage(View view){
-        //An intent is an abstract description of an operation to be performed.
-        Intent intent = new Intent(this, DisplayMessageActivity.class);
-        EditText editText = (EditText) findViewById(R.id.edit_message);
-        String message = editText.getText().toString();
-        intent.putExtra(EXTRA_MESSAGE, message);
-        startActivity(intent);
 
-    }
 }

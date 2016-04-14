@@ -27,6 +27,10 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.irene.myfirstapp.MyActivity" />
         </activity>
+        <activity
+            android:name=".ListaActivity"
+            android:label="@string/title_activity_lista"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

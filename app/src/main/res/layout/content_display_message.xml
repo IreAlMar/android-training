@@ -12,19 +12,23 @@
     tools:context="com.example.irene.myfirstapp.DisplayMessageActivity"
     tools:showIn="@layout/activity_display_message"
     android:id="@+id/content">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Listener de clase"
+                android:id="@+id/buttonListenerClase"
+                android:layout_gravity="center_horizontal"/>
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Listener de clase"
-        android:id="@+id/buttonListenerClase"
-        android:layout_gravity="center_horizontal"/>
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Listener anonimo"
-        android:id="@+id/buttonListenerAnonimo"
-        android:layout_gravity="center_horizontal"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Listener anonimo"
+                android:id="@+id/buttonListenerAnonimo"
+                android:layout_gravity="center_horizontal"/>
+    </LinearLayout>
 
 </RelativeLayout>
